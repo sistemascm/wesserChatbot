@@ -3,7 +3,7 @@ import typescript from 'rollup-plugin-typescript2'
 export default {
     input: 'index.ts',
     output: {
-        file: 'index.js',
+        file: 'api/index.js',
         format: 'esm',
     },
     onwarn: (warning) => {
