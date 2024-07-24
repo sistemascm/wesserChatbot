@@ -2,26 +2,26 @@ import { join } from 'path'
 import { createBot, createProvider, createFlow, addKeyword, utils } from '@builderbot/bot'
 import { MemoryDB as Database } from '@builderbot/bot'
 import { BaileysProvider as Provider } from '@builderbot/provider-baileys'
-import * as cron from 'cron';
-import * as  https from 'https' ;
+//import * as cron from 'cron';
+//import * as  https from 'https' ;
 
-const backendUrl = 'https://wesserchatbot.onrender.com';
-const job = new cron.CronJob('*/14 * * * *', function (){
+//const backendUrl = 'https://wesserchatbot.onrender.com';
+//const job = new cron.CronJob('*/14 * * * *', function (){
     // Se ejecuta cada 14 min
-    console.log('restarting server');
+//    console.log('restarting server');
     // Crea un htttps GET request para pegarle a la api
 
-    https.get(backendUrl, (res) =>{
-        if (res.statusCode=== 200) {
-            console.log('Server restarted');
-        } else {
-            console.error(`failed to restart server with status code:` + res.statusCode);
-        }
-    })
-    .on('error', (err)=>{
-        console.error('error during Restart:', err.message);
-    });
-}, null, true );
+ //   https.get(backendUrl, (res) =>{
+ //       if (res.statusCode=== 200) {
+ //           console.log('Server restarted');
+ //       } else {
+ //           console.error(`failed to restart server with status code:` + res.statusCode);
+ //       }
+ //   })
+ //   .on('error', (err)=>{
+ //       console.error('error during Restart:', err.message);
+//    });
+//}, null, true );
 
 const PORT = process.env.PORT ?? 3008
 
